@@ -7,16 +7,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "tr_bulletin")
-@AllArgsConstructor
-@NoArgsConstructor
+@Table(name="td_permission")
 @Getter
 @Setter
-public class Bulletin {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Permission {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne
-    private User candidate;
-    private String photoUrl;
+    private String permission_name;
 }

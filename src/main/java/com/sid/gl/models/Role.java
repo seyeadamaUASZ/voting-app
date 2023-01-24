@@ -7,16 +7,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "tr_bulletin")
+@Table(name="td_role")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Bulletin {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne
-    private User candidate;
-    private String photoUrl;
+    private String roleName;
 }
