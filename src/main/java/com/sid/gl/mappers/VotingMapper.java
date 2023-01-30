@@ -21,4 +21,6 @@ public class VotingMapper {
         BeanUtils.copyProperties(userDTO,user);
         return user;
     }
+
+
 }
