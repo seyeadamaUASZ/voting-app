@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class VotingMapper {
-
     public Election convertElection(ElectionDTO electionDTO){
         Election election = new Election();
         election.setTitle_election(electionDTO.title_election());
