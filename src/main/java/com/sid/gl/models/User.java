@@ -4,14 +4,16 @@ import com.sid.gl.enums.UserType;
 import com.sid.gl.models.common.Auditable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Table(name = "td_user")
 @Getter
+@EqualsAndHashCode(callSuper = true)
 @Setter
-public class User extends Auditable {
+public class User extends Auditable<String> {
     private String firstName;
     private String lastName;
     @Email

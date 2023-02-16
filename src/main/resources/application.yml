@@ -1,0 +1,16 @@
+server:
+  port: 9092
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/db_vote?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    open-in-view: false
+
+
+

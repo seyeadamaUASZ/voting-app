@@ -12,8 +12,13 @@ public class VotingMapper {
 
     public Election convertElection(ElectionDTO electionDTO){
         Election election = new Election();
-        BeanUtils.copyProperties(electionDTO,election);
+        election.setTitle_election(electionDTO.title_election());
+        election.setDateEndElection(electionDTO.dateEnd());
         return election;
+    }
+
+    public ElectionDTO convertElectionDTO(Election election){
+        return new ElectionDTO(election.getTitle_election(),election.getDateEndElection());
     }
 
     public User convertUser(UserDTO userDTO){
